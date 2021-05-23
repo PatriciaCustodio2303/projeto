@@ -1,0 +1,10 @@
+<ul>
+    {%- for education in site.education -%}
+    <li>
+        <h1>{{ education.time }}</h1>
+        <h2>{{ education.title }}</h2>
+        <h3>{{ education.location }}</h2>
+    </li>
+    {{ education.content }}
+    {%- endfor -%}
+</ul>

@@ -1,0 +1,10 @@
+<ul>
+    {%- for experience in site.experience -%}
+    <li>
+        <h1>{{ experience.time }}</h1>
+        <h2>{{ experience.title }}</h2>
+        <h3>{{ experience.location }}</h2>
+    </li>
+    {{ experience.content }}
+    {%- endfor -%}
+</ul>

@@ -1,6 +1,6 @@
 ---
 layout: contacts
-title: Contact
+title: Contacts
 ---
 
 <h1>Contacts</h1>
