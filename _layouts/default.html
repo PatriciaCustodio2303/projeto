@@ -7,6 +7,22 @@
 
     {%- include header.html -%}
 
+    <main>
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+  {% comment %}
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
@@ -16,5 +32,7 @@
     {%- include footer.html -%}
 
   </body>
+
+  {% endcomment %}
 
 </html>
