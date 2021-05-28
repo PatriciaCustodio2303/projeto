@@ -45,9 +45,6 @@ collections:
   experience:
     output: true
     permalink: /experience/:path/
-  skills:
-    output: true
-    permalink: /skills/:path/
   work:
     output: true
     permalink: /work/:path/

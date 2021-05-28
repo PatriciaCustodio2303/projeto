@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        {% for work in site.work %}
+            <li><a href="{{ site.baseurl }}/{{work.url}}"><img src="{{work.image-src}}"> {{ work.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
