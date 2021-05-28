@@ -1,0 +1,10 @@
+<ul>
+    {%- for work in site.work -%}
+    <li>
+        <h2>{{ work.title }}</h2>
+        <h3>{{ work.link }}</h2>
+    </li>
+    {{ experience.content }}
+    {%- endfor -%}
+</ul>
+

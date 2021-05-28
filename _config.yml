@@ -48,9 +48,9 @@ collections:
   skills:
     output: true
     permalink: /skills/:path/
-  projects:
+  work:
     output: true
-    permalink: /projects/:path/
+    permalink: /work/:path/
   
 # Exclude from processing.
 # The following items will not be processed, by default.
