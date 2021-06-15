@@ -1,0 +1,30 @@
+@import "colors";
+
+@mixin defaultfont {
+    font-family: 'messina_sansregular', Helvetica, sans-serif;
+    color: $c-neutral;
+}
+
+@mixin defaulttitle {
+    font-family: 'monument', Helvetica, sans-serif;
+    color: $c-neutral;
+}
+
+@mixin heading1 {
+    @include defaulttitle;
+    font-size: 4.2rem;
+    line-height: 6rem;
+    color: $c-primary;
+}
+
+@mixin heading2 {
+    @include defaulttitle;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+@mixin heading3 {
+    @include defaulttitle;
+    font-size: 2rem;
+    line-height: 3rem;
+}

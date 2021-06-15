@@ -1,0 +1,37 @@
+@import "colors";
+@import "typography";
+@import "spacing";
+@import "components";
+@import "buttons";
+
+
+/* Default values */
+body {
+    @include defaultfont;
+    scroll-behavior: smooth;
+    background-color: $c-background;
+    margin: 0;
+    padding: 0;
+}
+
+li, 
+p {
+    list-style-type: none;
+}
+
+/* Navigation */
+header {
+
+    ul {
+        padding: $space-s $space-xs;
+        text-align: right;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 $space-m;
+    }
+
+}
+
+/* Footer */
