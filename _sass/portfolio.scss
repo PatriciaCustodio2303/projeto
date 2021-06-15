@@ -19,6 +19,24 @@ p {
     list-style-type: none;
 }
 
+a {
+    color: $c-neutral;
+    text-decoration: none;
+}
+
+h1 {
+    @include heading1;
+}
+
+h2 {
+    @include heading2;
+}
+
+p {
+    @include paragraphregular;
+}
+
+
 /* Navigation */
 header {
 
@@ -34,4 +52,31 @@ header {
 
 }
 
+/* Main */
+
+main {
+    margin: $space-xl;
+    max-width: 1440px;
+}
+
 /* Footer */
+footer {
+    margin: $space-xl;
+    
+}
+
+.getintouch {
+    @include paragraphbold;
+    color: $c-primary;
+}
+
+
+/* About */
+
+.time, .credits {
+    @include paragraphlight;
+}
+
+.position {
+    @include paragraphbold;
+}

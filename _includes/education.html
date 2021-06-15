@@ -1,9 +1,9 @@
 <ul>
     {%- for education in site.education -%}
     <li>
-        <h1>{{ education.time }}</h1>
-        <h2>{{ education.title }}</h2>
-        <h3>{{ education.location }}</h2>
+        <p class="time">{{ education.time }}</p>
+        <p class="position">{{ education.title }}</p>
+        <p>{{ education.location }}</p>
     </li>
     {{ education.content }}
     {%- endfor -%}

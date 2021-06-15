@@ -1,12 +1,31 @@
 @import "colors";
 
+@font-face {
+    font-family: "monument";
+    src: url('../assets/fonts/monumentextended-regular-webfont.woff2');
+}
+@font-face {
+    font-family: "messina_sanslight";
+    src: url('../assets/fonts/messinasans-light-webfont.woff2');
+}
+
+@font-face {
+    font-family: "messina_sansbold";
+    src: url('../assets/fonts/messinasans-bold-webfont.woff2');
+}
+
+@font-face {
+    font-family: "messina_sansregular";
+    src: url('../assets/fonts/messinasans-regular-webfont.woff2');
+}
+
 @mixin defaultfont {
-    font-family: 'messina_sansregular', Helvetica, sans-serif;
+    font-family: "messina_sansregular", Helvetica, sans-serif;
     color: $c-neutral;
 }
 
 @mixin defaulttitle {
-    font-family: 'monument', Helvetica, sans-serif;
+    font-family: "monument", Helvetica, sans-serif;
     color: $c-neutral;
 }
 
@@ -27,4 +46,24 @@
     @include defaulttitle;
     font-size: 2rem;
     line-height: 3rem;
+}
+
+@mixin paragraphregular {
+    @include defaultfont;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+@mixin paragraphlight {
+    @include defaultfont;
+    font-family: "messina_sanslight", Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+@mixin paragraphbold {
+    @include defaultfont;
+    font-family: "messina_sansbold", Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
