@@ -6,6 +6,10 @@
 
 
 /* Default values */
+html {
+    scroll-behavior: smooth;    
+}
+
 body {
     @include defaultfont;
     scroll-behavior: smooth;
@@ -16,12 +20,17 @@ body {
 
 li, 
 p {
+    @include paragraphregular;
     list-style-type: none;
 }
 
 a {
-    color: $c-neutral;
+    @include paragraphregular;
     text-decoration: none;
+}
+
+a:hover {
+    color: $c-primary;
 }
 
 h1 {
@@ -32,24 +41,29 @@ h2 {
     @include heading2;
 }
 
-p {
-    @include paragraphregular;
+h3 {
+    @include heading3;
 }
 
 
+img {
+    width: 100%;
+}
 /* Navigation */
+
 header {
+    padding: $space-xs $space-l $space-xs $space-l;
+    max-width: 100%;
 
     ul {
-        padding: $space-s $space-xs;
         text-align: right;
     }
 
     li {
         display: inline-block;
         padding: 0 $space-m;
+        text-transform: uppercase;
     }
-
 }
 
 /* Main */
@@ -61,22 +75,85 @@ main {
 
 /* Footer */
 footer {
-    margin: $space-xl;
+    margin: $space-l;
+    display: flex;
+    justify-content: space-between;
     
 }
-
 .getintouch {
     @include paragraphbold;
     color: $c-primary;
 }
 
+/* Index */
+
+.headline {
+    margin: 7rem ;
+}
+
+.folio {
+    @include paragraphlight;
+}
+
+.name {
+    max-width: 10rem;
+    margin-top: 2rem;
+    font-size: 6rem;
+    line-height: 7rem;
+    color: $c-primary;
+}
+
+.jobtitle {
+    @include paragraphbold;
+    font-size: 2rem;
+    position: relative;
+    left: 16rem;
+    margin-top: 2rem;
+}
+
+/*
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0.5rem;
+    row-gap:0.5rem;
+
+
+}
+*/
 
 /* About */
 
-.time, .credits {
+.aboutsection {
+    max-width: 50rem;
+    margin-bottom: $space-xxxl;
+}
+.aboutdescription {
     @include paragraphlight;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: -$space-s ;
+    padding: 0;
+}
+
+.time {
+    @include paragraphlight;
+    margin-top: $space-xl;
+    margin-bottom: -1.2rem;
 }
 
 .position {
     @include paragraphbold;
+}
+
+.location {
+    
 }

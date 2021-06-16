@@ -1,5 +1,6 @@
 @import "colors";
 
+/* Local Fonts */
 @font-face {
     font-family: "monument";
     src: url('../assets/fonts/monumentextended-regular-webfont.woff2');
@@ -19,6 +20,9 @@
     src: url('../assets/fonts/messinasans-regular-webfont.woff2');
 }
 
+
+/* Default Mixins */
+
 @mixin defaultfont {
     font-family: "messina_sansregular", Helvetica, sans-serif;
     color: $c-neutral;
@@ -29,23 +33,26 @@
     color: $c-neutral;
 }
 
+/* Specific Mixins */
+
 @mixin heading1 {
     @include defaulttitle;
-    font-size: 4.2rem;
-    line-height: 6rem;
-    color: $c-primary;
+    font-size: 4rem;
+    line-height: 5rem;
 }
 
 @mixin heading2 {
     @include defaulttitle;
     font-size: 3rem;
     line-height: 4rem;
+    text-transform: uppercase;
 }
 
 @mixin heading3 {
     @include defaulttitle;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
 }
 
 @mixin paragraphregular {
@@ -64,6 +71,6 @@
 @mixin paragraphbold {
     @include defaultfont;
     font-family: "messina_sansbold", Helvetica, sans-serif;
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 2rem;
+    line-height: 3rem;
 }
