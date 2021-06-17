@@ -1,10 +1,12 @@
-<ul>
-    {%- for experience in site.experience -%}
-    <li>
-        <p class="time">{{ experience.time }}</p>
-        <p class="position">{{ experience.title }}</p>
-        <p class="location"> {{ experience.location }}</p>
-    </li>
-    {{ experience.content }}
-    {%- endfor -%}
-</ul>
+    <ul class="insidesections">
+        {%- for experience in site.experience -%}
+        <li class="resumecolumn">
+            <p class="time">{{ experience.time }}</p>
+            <div class="positionlocation">
+                <p class="position">{{ experience.title }}</p>
+                <p class="location"> {{ experience.location }}</p>
+            </div>
+        </li>
+        {{ experience.content }}
+        {%- endfor -%}
+    </ul>

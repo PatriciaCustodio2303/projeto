@@ -1,0 +1,2 @@
+$mq-medium:"( min-width: 660px )";
+$mq-large:"( min-width: 1240px )";

@@ -58,7 +58,7 @@
 @mixin paragraphregular {
     @include defaultfont;
     font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
 }
 
 @mixin paragraphlight {
@@ -70,7 +70,8 @@
 
 @mixin paragraphbold {
     @include defaultfont;
+    color: $c-primary;
     font-family: "messina_sansbold", Helvetica, sans-serif;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
 }

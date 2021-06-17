@@ -1,10 +1,13 @@
-<ul>
+<ul class="insidesections">
     {%- for education in site.education -%}
-    <li>
+    <li class="resumecolumn">
         <p class="time">{{ education.time }}</p>
-        <p class="position">{{ education.title }}</p>
-        <p>{{ education.location }}</p>
+        <div class="positionlocation">
+            <p class="position">{{ education.title }}</p>
+            <p class="location">{{ education.location }}</p>
+        </div>
     </li>
     {{ education.content }}
+    <hr>
     {%- endfor -%}
-</ul>
+ </ul>

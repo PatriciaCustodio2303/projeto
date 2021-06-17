@@ -3,6 +3,7 @@
 @import "spacing";
 @import "components";
 @import "buttons";
+@import "mediaqueries";
 
 
 /* Default values */
@@ -76,6 +77,7 @@ main {
 /* Footer */
 footer {
     margin: $space-l;
+    margin-bottom: -$space-xxxl;
     display: flex;
     justify-content: space-between;
     
@@ -85,10 +87,17 @@ footer {
     color: $c-primary;
 }
 
+.credits {
+    transform: translateY($space-m);
+}
+
 /* Index */
 
 .headline {
-    margin: 7rem ;
+    margin: $space-xxxl $space-s $space-xxxl;
+    @media #{ $mq-large } {
+		margin: $space-xxxl;
+	}
 }
 
 .folio {
@@ -98,56 +107,73 @@ footer {
 .name {
     max-width: 10rem;
     margin-top: 2rem;
-    font-size: 6rem;
-    line-height: 7rem;
+    font-size: 4.2rem;
+    line-height: 5.8rem;
     color: $c-primary;
+    @media #{ $mq-medium } {
+		font-size: 6rem;
+        line-height: 7rem;;
+	}
 }
 
 .jobtitle {
     @include paragraphbold;
-    font-size: 2rem;
+    color: $c-neutral;
     position: relative;
-    left: 16rem;
+    text-align: right;
     margin-top: 2rem;
+    @media #{ $mq-medium} {
+		font-size: 2rem;
+        text-align: left;
+        left: $space-xxxxl;
+
+	}
 }
 
-/*
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 0.5rem;
-    row-gap:0.5rem;
-
-
 }
-*/
 
-/* About */
+/* About Page*/
 
 .aboutsection {
     max-width: 50rem;
     margin-bottom: $space-xxxl;
 }
+
 .aboutdescription {
     @include paragraphlight;
     font-size: 1.5rem;
     line-height: 2.2rem;
 }
 
+/* About Page - Resume*/
+
 hr {
     display: block;
-    height: 1px;
+    height: 2px;
     border: 0;
     border-top: 1px solid #ccc;
     margin-top: -$space-s ;
     padding: 0;
 }
 
+.resumecolumn {
+    @media #{ $mq-large} {
+        display: flex;
+        margin: 0; 
+    }
+}
+
 .time {
     @include paragraphlight;
-    margin-top: $space-xl;
+    margin-top: $space-l;
     margin-bottom: -1.2rem;
+    width: 28rem;
+}
+.positionlocation {
+    @media #{ $mq-large} {
+        margin-left: $space-xxl;
+    }
 }
 
 .position {
@@ -155,5 +181,52 @@ hr {
 }
 
 .location {
-    
+    margin-top: -$space-m;
+    margin-bottom: $space-xl;
 }
+
+.insidesections {
+        margin-left: -$space-l; 
+        margin-bottom: $space-xxl;
+        @media #{ $mq-large} {
+            margin-top: -$space-s;
+        }
+}
+
+
+/* About Page - Skills and Languages*/
+
+.skillsandlanguages {
+
+    ul {
+        margin-left: -$space-l;
+    }
+
+    li {
+        margin: $space-s 0 $space-s 0;
+        
+    }
+
+    @media #{ $mq-large} {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: $space-s;
+    }
+
+}
+
+.skillssection {
+    width: 32rem;
+}
+
+.languagessection {
+    margin: $space-xxxl 0 $space-xxxl 0;
+
+    @media #{ $mq-large} {
+        margin: 0;
+    }
+}
+
+
+
+/* About Page - Skills and Languages*/
