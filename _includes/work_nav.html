@@ -1,7 +1,9 @@
 <nav>
-    <ul>
+    <ul class="workcontainers">
         {% for work in site.work %}
-            <li><a href="{{ site.baseurl }}/{{work.url}}"><img src="{{work.image-src}}"> {{ work.title }}</a></li>
+        <div class="individual_container">
+            <li><a href="{{ site.baseurl }}/{{work.url}}" target="_blank"><img src="{{work.image-src}}"></a></li>
+        </div>
         {% endfor %}
     </ul>
 </nav>

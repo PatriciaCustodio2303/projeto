@@ -48,6 +48,11 @@ collections:
   work:
     output: true
     permalink: /work/:path/
+    order:
+      - brew_pods.html
+      - fbaul_redesign.html
+      - asisa.html
+      - spotidy_streaming.html
   
 # Exclude from processing.
 # The following items will not be processed, by default.

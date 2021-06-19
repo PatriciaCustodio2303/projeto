@@ -1,8 +1,6 @@
 @import "colors";
 @import "typography";
 @import "spacing";
-@import "components";
-@import "buttons";
 @import "mediaqueries";
 
 
@@ -17,6 +15,7 @@ body {
     background-color: $c-background;
     margin: 0;
     padding: 0;
+    width:auto;
 }
 
 li, 
@@ -54,34 +53,42 @@ img {
 
 header {
     padding: $space-xs $space-l $space-xs $space-l;
-    max-width: 100%;
+    margin-bottom: $space-xxl;
 
+   
     ul {
         text-align: right;
     }
 
     li {
         display: inline-block;
-        padding: 0 $space-m;
+        padding: 0 $space-xs;
         text-transform: uppercase;
+        @media #{ $mq-medium} {
+            padding: 0 $space-s;
+        }
+        
     }
 }
 
 /* Main */
 
 main {
-    margin: $space-xl;
     max-width: 1440px;
+}
+
+.aboutpage,
+.contactspage {
+    margin: $space-xl; 
 }
 
 /* Footer */
 footer {
-    margin: $space-l;
-    margin-bottom: -$space-xxxl;
+    margin: $space-xxxxl $space-l 0 $space-l ;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
+
 .getintouch {
     @include paragraphbold;
     color: $c-primary;
@@ -94,9 +101,10 @@ footer {
 /* Index */
 
 .headline {
-    margin: $space-xxxl $space-s $space-xxxl;
+    margin: $space-xxxl $space-s $space-xxxxl $space-xl;
+
     @media #{ $mq-large } {
-		margin: $space-xxxl;
+		margin: $space-xxxl 0 $space-2xl $space-xxxl;
 	}
 }
 
@@ -120,17 +128,78 @@ footer {
     @include paragraphbold;
     color: $c-neutral;
     position: relative;
-    text-align: right;
     margin-top: 2rem;
     @media #{ $mq-medium} {
 		font-size: 2rem;
-        text-align: left;
-        left: $space-xxxxl;
-
+        margin-left: $space-3xl;
+        width: fit-content;
 	}
 }
 
-.container {
+/* Animation */
+ .rotate {
+  animation: rotation 4s infinite linear;
+  position: absolute;
+  top: $space-3xl;
+  left: $space-3xl;
+  width: 14rem;
+  @media #{ $mq-medium} {
+    top: $space-xxxxl;
+    left: auto;
+    right: $space-xl;
+    width: 28rem;;
+    }
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Work Nav*/
+
+
+.workcontainers {
+    position: relative;
+    margin: $space-l;
+
+    li {
+    margin-top: $space-xxl;
+    margin-bottom: $space-xxl;
+    @media #{ $mq-large} {
+		margin-top: $space-l;
+        margin-bottom: $space-l;
+        }
+    }
+
+    img {
+        transform: translateX(-$space-m);
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    @media #{ $mq-large} {
+		display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+	}
+
+}
+
+.individual_container {
+    @media #{ $mq-large} {
+        position: relative;
+        height: 100%;
+        width: 48%;
+
+    }
+
 }
 
 /* About Page*/
@@ -227,6 +296,68 @@ hr {
     }
 }
 
+/* Work Page*/
+
+.worktitle {
+    margin-left: $space-xl;
+}
+
+/* Project Page */
+
+.projectcontent {
+    margin: $space-xl;
+        @media #{ $mq-large} {
+        margin: auto;
+        width: 50%;
+    } 
+}
+.projectpage {
+    
+    h1 {
+    font-size: 3rem;
+    margin-top: $space-xl;
+    color: $c-primary;
+    }
+
+    h2 {
+    @include heading3; 
+    margin-top: $space-xxxl;
+}
+
+    li {
+     list-style-type: square;
+    }
+}
 
 
-/* About Page - Skills and Languages*/
+/* Contacts Page */
+
+.contactspage {
+    
+    h1 {
+        color: $c-primary;
+    }
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    margin-left: $space-s;
+
+    li {
+        display: inline-block;
+        padding: 0 $space-xs;
+
+    }
+}
+
+.grid-item1,
+.grid-item3 {
+    grid-column-start: 1;
+  }
+
+  .grid-item2,
+  .grid-item4  {
+    grid-column-start: 2;
+  }
