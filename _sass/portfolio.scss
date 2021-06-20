@@ -342,13 +342,13 @@ hr {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 6rem auto;
+    grid-template-columns: $space-xxxxl auto;
     margin-left: $space-s;
 
     li {
         display: inline-block;
         padding: 0 $space-xs;
-
+        transform: translateX(-$space-xl);
     }
 }
 
